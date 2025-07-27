@@ -1,0 +1,5 @@
+Future<void> waitSplashed() async {
+    await Future.delayed(const Duration(seconds: 3));
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: (context) => ScreenHome()));
+  }

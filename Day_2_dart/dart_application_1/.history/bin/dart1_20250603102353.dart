@@ -1,0 +1,6 @@
+void add({required int? a, required int? b, int? c = 0}) {}
+
+void main() {
+  add(b: 20, a: 10); // Named parameter order doesn't matter
+  add(a: 10, b: 20, c: 30); // All parameters provided
+}

@@ -1,0 +1,37 @@
+final nameController = TextEditingController();
+
+final List<String> departments = [
+    'HR',
+    'Finance',
+    'IT',
+    'Sales',
+    'Marketing'
+  ];
+  String? selectedDepartment;
+
+TextFormField(
+	    controller: nameController,
+            decoration: InputDecoration(
+                border:
+                    OutlineInputBorder(borderRadius: BorderRadius.circular(6)),
+                hintText: 'Enter Text Here'),
+          ),
+
+DropdownButtonFormField(
+                  decoration: const InputDecoration(
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Colors.black,
+                        ), // Bottom border color and thickness
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.black),
+                      )),
+                  value: selectedDepartment,
+                  hint: const Text('Select a Department'),
+                  onChanged: (value) {
+                    selectedDepartment = value!;
+                  },
+                  items: departments.map((dept) {
+                    return DropdownMenuItem(value: dept, child: Text(dept));
+                  }).toList()),

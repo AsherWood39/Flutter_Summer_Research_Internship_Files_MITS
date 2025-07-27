@@ -1,0 +1,226 @@
+											NOTES
+. Dart Classes : Classes are declared similar to java using 'class' keyword
+. eg :
+	PROGRAM :
+	class Person {
+	  String? name;
+	  int? age;
+	
+	  Person({this.age = 0, required this.name});
+
+	  void showPerson() {
+	  	print('Name: $name\nAge: $age');
+	  }
+	}
+
+	class Vehicle {
+	  String? name;
+	  String? color;
+	  int? model;
+	
+	  Vehicle(this.name, this.color, this.model);
+	}	
+
+	void main() {
+	  Person p = Person(name: 'John Doe', age: 30);
+	  p.showPerson();
+
+	  Vehicle v = Vehicle('Car', 'Red', 2020);
+	  print('\nVehicle Name: ${v.name}\nColor: ${v.color}\nModel: ${v.model}');
+	}
+
+	OUTPUT : 
+	Name: John Doe
+	Age: 30
+
+	Vehicle Name: Car
+	Color: Red
+	Model: 2020
+. Inheritance :
+. eg :
+	PROGRAM :
+	class Animal {
+		void sayHello() {
+			print('Animal says Hello');
+		}
+	}
+	
+	class Human extends Animal {
+		void sayName() {
+			print('Human says Name');
+		}
+	}
+
+	void main() {
+		Animal a = Animal();
+		a.sayHello();
+
+		Human h = Human();
+		h.sayHello();
+		h.sayName();
+	}
+
+	OUTPUT :
+	Animal says Hello
+	Animal says Hello
+	Human says Name
+
+. Method Overriding :
+. eg :
+	PROGRAM :
+	class Animal {
+	  void sayHello() {
+	    print('Animal says Hello');
+	  }
+	}
+	
+	class Human extends Animal {
+	  @override
+	  void sayHello() {
+	    print('Human says Hello');
+	    super.sayHello();
+	  }
+	
+	  void sayName() {
+	    print("Human says Name");
+	  }
+	}
+	
+	void main() {
+	  Animal a = Animal();
+	  a.sayHello();
+
+	  Human h = Human();
+	  h.sayHello();
+	  h.sayName();
+	}
+
+	OUTPUT :
+	Animal says Hello
+	Human says Hello
+	Animal says Hello
+	Human says Name
+. Abstract classes are by default interfaces.
+. eg :
+	PROGRAM :
+	abstract class Animal {
+	  void sayHello();
+	}
+	
+	class Human extends Animal {
+		  @override
+	  void sayHello() {
+	    print('Human says Hello');
+	  }
+	
+	  void sayName() {
+	    print("Human says Name");
+	  }
+	}
+
+	void main() { 
+	  Human h = Human();
+	  h.sayHello();
+	  h.sayName();
+	}
+
+	OUTPUT :
+	Human says Hello
+	Human says Name
+. List and its operations :
+. eg :
+	PROGRAM :
+	void main() {
+	  List<int> numbers = [1, 2, 3, 4, 5, 6, 7];
+	
+	  print('Length of the list is : ${numbers.length}');
+	
+	  numbers.add(8); // Adding an element to the list
+	  print('List after adding an element: $numbers');
+	
+	  numbers.addAll([9, 10, 11]); // Adding multiple elements to the list
+	  print('List after adding elements: $numbers');
+	
+	  numbers.remove(5); // Removing an element from the list
+	  print('List after removing an element: $numbers');
+	
+	  numbers.removeAt(0); // Removing an element at a specific index
+	  print('List after removing an element at index 0: $numbers');
+	
+		  numbers.shuffle(); // Shuffling the list
+	  print('List after shuffling: $numbers');
+	
+	  numbers.removeWhere(
+	      (test) => test == 3); // Removing elements based on a condition
+	  print('List after removing elements where condition is true: $numbers');
+
+	  print(
+	      'List contains 0: ${numbers.contains(0)}'); // Checking if an element exists
+		
+	  numbers.insert(0, 0); // Inserting an element at a specific index
+	  print('List after inserting an element at index 0: $numbers');
+	
+	  print(
+	      'First element of the list: ${numbers.first}\nLast element of the list: ${numbers.last}');
+
+	  print('The list with its indexes: ${numbers.asMap()}');
+		
+	  numbers.clear(); // Clearing the list
+	  print('List after clearing: $numbers');
+
+	  // Sorting the list
+	  numbers = [5, 3, 8, 1, 2];
+	  numbers.sort(); // Sorting in ascending order
+	  print('List after sorting in ascending order: $numbers');
+	  numbers.sort((a, b) => b.compareTo(a)); // Sorting in descending order
+	  print('List after sorting in descending order: $numbers');
+	}
+
+	OUTPUT : 
+	List after adding elements: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+	List after removing an element: [1, 2, 3, 4, 6, 7, 8, 9, 10, 11]
+	List after removing an element at index 0: [2, 3, 4, 6, 7, 8, 9, 10, 11]
+	List after shuffling: [9, 10, 7, 11, 4, 8, 2, 6, 3]
+	List after removing elements where condition is true: [9, 10, 7, 11, 4, 8, 2, 6]
+	List contains 0: false
+	List after inserting an element at index 0: [0, 9, 10, 7, 11, 4, 8, 2, 6]
+	First element of the list: 0
+	Last element of the list: 6
+	The list with its indexes: {0: 0, 1: 9, 2: 10, 3: 7, 4: 11, 5: 4, 6: 8, 7: 2, 8: 6}
+	List after clearing: []
+	List after sorting in ascending order: [1, 2, 3, 5, 8]
+	List after sorting in descending order: [8, 5, 3, 2, 1]
+. Data modelling
+. eg :
+	PROGRAM : 
+	class Student {
+  	final int? roll;
+	  final String? name;
+	  final int? totalMarks;
+
+	  Student({required this.roll, required this.name, required this.totalMarks});
+	}
+
+	void main() {
+	  List<Student> students = [];
+	  Student s1 = Student(roll: 1, name: "Alice", totalMarks: 85);
+	  students.add(s1);
+	  Student s2 = Student(roll: 2, name: "Bob", totalMarks: 90);
+	  Student s3 = Student(roll: 3, name: "Charlie", totalMarks: 78);
+	  Student s4 = Student(roll: 4, name: "David", totalMarks: 88);
+	  students.addAll([s2, s3, s4]);
+
+  	for (var doc in students) {
+	    print(
+	        "[Roll: ${doc.roll}, Name: ${doc.name}, Total Marks: ${doc.totalMarks}]");
+	  }
+	}
+
+	OUTPUT :
+	[Roll: 1, Name: Alice, Total Marks: 85]
+	[Roll: 2, Name: Bob, Total Marks: 90]
+	[Roll: 3, Name: Charlie, Total Marks: 78]
+	[Roll: 4, Name: David, Total Marks: 88]
+
+. const : Once value is assigned during compile time, it will be constant throughout the execution to make branch predictions simpler
+. final : Once the value is assigned during runtime, it won't change

@@ -1,0 +1,331 @@
+								DART PAD
+
+Data Type :
+	int
+	double
+	String
+	bool
+
+	num (generic data type for Numeric values)
+	var (generic data type for all the data types int/double/String/bool)
+	
+. For printing the values of a variable we use the function 'print()'. Formatted printing can be done using '$' symbol.
+. eg :
+	PROGRAM :
+	void main() 
+	{
+	  print("Working with data types :\n");
+	  int i=10;
+	  double d=10.2;
+	  String name= 'Athishta';
+	  bool flag=true;
+  
+	  print(i);
+	  print("The value of i is $i");
+	  print("$i\n$d\n$name\n$flag");
+	  
+	  print("\nWorking with generic data types : \n");
+	  num a=1;
+	  num b=1.2;
+	  var c="String";
+	  var e=20;
+	  print("$a\n$b\n$c\n$e");
+	}	
+
+	OUTPUT :
+	Working with data types :
+
+	10
+	The value of i is 10
+	10
+	10.2
+	Athishta
+	true
+
+	Working with generic data types : 
+
+	1
+	1.2
+	String
+	20
+
+
+Conditional Statements :
+. Similar to C there are :
+	if - else
+	if - else if - else
+	Ternary operator
+.eg :
+	PROGRAM 1 :
+	void main() 
+	{
+	  int i=-10;
+	  if (i>0)
+	  {
+	    print('positive');
+	  }
+	  else if (i==0)
+	  {
+	    print("zero");
+	  }
+	  else
+	  {
+	    print('negative');
+	  }
+	}
+
+	OUTPUT :
+	negative
+
+	PROGRAM 2 : 
+	void main() 
+	{
+	  int i=0;
+	  i>=0? (i>0?print("positive") : print("zero")) : print("negative"); // i>0? print("positive") : (i==0? print("zero") : print("negative"));
+	}
+
+	OUTPUT :
+	zero
+
+. Type safety is implemented in modern programming language.
+. In dart, type safety is implemented by adding a '?' with the data type during declaration and a '!' while working with the variable.
+. eg :
+	PROGRAM :
+	void main() 
+	{
+	  int? i;
+	  i!>0? print("positive") : (i==0? print("zero") : print("negative"));
+	}
+	
+	OUTPUT :
+	Uncaught Error, error: Error: Unexpected null value.
+. Loops :
+	for
+	
+. Arrays are declared by the class 'List' with the data type declared in '<>'
+. eg :
+	PROGRAM 1 :
+	void main() {
+	  List<int> myIntergerList = [];
+	  List<String> myNameList = ['a', 'b', 'c'];
+	
+	  for (int i = 0; i < myNameList.length; i++) {
+	    print(myNameList[i]);
+	  }
+	  print(myNameList);
+	}
+
+	OUTPUT :
+	a
+	b
+	c
+	[a, b, c]
+
+	PROGRAM 2 :
+	void main() {
+	  List<int> myIntergerList = [];
+	  List<String> myNameList = ['a', 'b', 'c'];
+
+	  for (var doc in myNameList) {
+	    print(doc);
+	  }
+	}
+
+	OUTPUT :
+	a
+	b
+	c
+
+. Funtions :
+	with parameter and return type
+	with parameter and without return type
+	without parameter and with return type
+	without parameter and return type
+. eg :
+	PROGRAM 1 :
+	int sum1(int a, int b) // with parameter and return type
+	{
+	  return (a + b);
+	}	
+
+	void sum2(int a, int b) // with parameter and without return type
+	{
+	  print(10 + 20);
+	}
+	
+	int sum3() // without parameter and with return type
+	{
+	  return (10 + 20);
+	}
+
+	void sum4() // without parameter and return type
+	{
+	  print(10 + 20);
+	}	
+
+	void main() {
+	  sum3(1, 2);
+	  sum4();
+	  print(sum1(10, 2));
+	  print(sum2());
+	}
+
+	OUTPUT :
+	3
+	30
+	12
+	30
+
+	PROGRAM 2 :
+	void add(int a, int b) {
+	  print(a + b);
+	}
+	
+	void subtract(int a, int b) {
+	  print(a - b);
+	}
+	
+	void multiply(int a, int b) {
+	  print(a * b);
+	}
+
+	void divide(int a, int b) {
+	  if (b == 0) {
+	    print("Cannot divide by zero");
+	    return;
+	  }
+	  print(a ~/ b); // Integer division
+	  print(a / b); // Floating-point division
+	}
+
+	void modulus(int a, int b) {
+	  if (b == 0) {
+	    print("Cannot perform modulus by zero");
+	    return;
+	  }
+	  print(a % b);
+	}
+
+	void main() {
+	  add(1, 2);
+	  subtract(5, 3);
+	  multiply(4, 6);
+	  divide(8, 2);
+	  divide(8, 0);
+	  modulus(19, 5);
+	}
+
+	OUTPUT :
+	3
+	2
+	24
+	4
+	4.0
+	Cannot divide by zero
+	4
+
+. 	Named parameter : Declared within '{}'. They are inherently optional parameters
+	Optional parameter : Declared within '{}'
+	Required parameter : Declared within '{}' along with the 'required' keyword.
+. eg:
+	PROGRAM 1 :
+	void add({int? a, int? b}) {
+	  if (a == null || b == null) {
+	    print('Both a and b must be provided.');
+	    return;
+	  }
+	  print(a + b);
+	}
+
+	void subtract({required int? a, required int? b}) {
+	  print(a! - b!);
+	}
+
+	void main() {
+	  add(b: 20, a: 10); // Named parameter order doesn't matter
+	  add(a: 10); // Optional parameter
+
+	  subtract(a: 20, b: 10); // Required parameters
+	}	
+
+	OUTPUT :
+	30
+	Both a and b must be provided.
+	10
+
+	PROGRAM 2 :
+	void add({required int? a, required int? b, int? c}) {
+	  if (a == null || b == null || c == null) {
+	    print('a, b and c must be provided.');
+	    return;
+	  }
+	  print(a + b + c);
+	}
+
+	void main() {
+	  add(b: 20, a: 10); // Named parameter order doesn't matter
+	  add(a: 10, b: 20, c: 30); // All parameters provided
+	}
+
+	OUTPUT :
+	a, b and c must be provided.
+	60
+	
+	PROGRAM 3 :
+	void add({required int? a, required int? b, int? c = 0}) {}
+
+	void main() {
+	  add(b: 20, a: 10); // Named parameter order doesn't matter
+	  add(a: 10, b: 20, c: 30); // All parameters provided
+	}
+
+. Asynchronous functions (or Future functions) : As the mobile can't wait for the fetching of certain data we can make the rest of the processes to continue working even if the fetching is still going on by declaring the fetching functions as asynchronous functions.
+. eg :
+	PROGRAM 1 :
+	void main() {
+	  print(1);
+	  fetchData1();
+	  fetchData2();
+	  print(4);
+	}
+
+	Future<void> fetchData1() async {
+	  print(2);
+	}
+
+	fetchData2() async {
+	  print(3);
+	}
+
+	OUTPUT : 
+	1
+	2
+	3
+	4
+
+	PROGRAM 2 :
+	void main() {
+	  print(1);
+	  fetchData1();
+	  fetchData2();
+	  print(4);
+	}	
+
+	Future<void> fetchData1() async {
+	  await Future.delayed(Duration(seconds: 3)); // Simulate a delay
+	  // This function simulates fetching data asynchronously.
+	  print(2);
+	}	
+
+	fetchData2() async {
+	  await Future.delayed(Duration(seconds: 5)); // Simulate a delay
+	  // This function simulates fetching data asynchronously.
+	  print(3);
+	}
+
+
+	OUTPUT :
+	1
+	4
+	2
+	3

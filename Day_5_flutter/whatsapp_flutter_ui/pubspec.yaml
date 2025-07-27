@@ -1,0 +1,29 @@
+name: whatsapp_flutter_ui
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+   - 'asset/images.jpeg'
+   - 'asset/p2.jpeg'
+   - 'asset/p3.jpeg'
+   - 'asset/p4.jpeg'
+   - 'asset/p5.jpeg'
+   - 'asset/p6.jpeg'
+   - 'asset/p7.jpeg'
+   - 'asset/p8.jpeg'
+   - 'asset/p9.jpeg'

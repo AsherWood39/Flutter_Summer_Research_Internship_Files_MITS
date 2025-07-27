@@ -1,0 +1,6 @@
+ListView.separated(
+              itemBuilder: (context, index) {}, 
+              separatorBuilder: (context, index) {
+                return const Divider();
+              }, 
+              itemCount: myChats.length)

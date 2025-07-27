@@ -1,0 +1,361 @@
+const ListTile(
+              leading: CircleAvatar(
+                backgroundImage: AssetImage('asset/p4.jpeg'),
+                radius: 24.0,
+              ),
+              title: Text(
+                'Divya Menon',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18.0,
+                    color: Colors.white),
+              ),
+              subtitle: Expanded(
+                child: Text(
+                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+                  style: TextStyle(color: Color(0xFF8E8E8E), fontSize: 15.0),
+                  overflow: TextOverflow
+                      .ellipsis, // adds "..." at the end if text is too long
+                  maxLines: 1, // ensures it's only one line
+                ),
+              ),
+              trailing: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Text(
+                    '7:30 pm',
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Color(0xFF8E8E8E),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const ListTile(
+              leading: CircleAvatar(
+                backgroundImage: AssetImage('asset/p3.jpeg'),
+                radius: 24.0,
+              ),
+              title: Text(
+                'Liam Davis',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18.0,
+                    color: Colors.white),
+              ),
+              subtitle: Expanded(
+                child: Text(
+                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+                  style: TextStyle(color: Color(0xFF8E8E8E), fontSize: 15.0),
+                  overflow: TextOverflow
+                      .ellipsis, // adds "..." at the end if text is too long
+                  maxLines: 1, // ensures it's only one line
+                ),
+              ),
+              trailing: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Text(
+                    '6:59 pm',
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Color(0xFF8E8E8E),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const ListTile(
+              leading: CircleAvatar(
+                backgroundImage: AssetImage('asset/p5.jpeg'),
+                radius: 24.0,
+              ),
+              title: Text(
+                'Isabella White',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18.0,
+                    color: Colors.white),
+              ),
+              subtitle: Expanded(
+                child: Text(
+                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+                  style: TextStyle(color: Color(0xFF8E8E8E), fontSize: 15.0),
+                  overflow: TextOverflow
+                      .ellipsis, // adds "..." at the end if text is too long
+                  maxLines: 1, // ensures it's only one line
+                ),
+              ),
+              trailing: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Text(
+                    '6:58 pm',
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Color(0xFF8E8E8E),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            ListTile(
+              leading: const CircleAvatar(
+                backgroundImage: AssetImage('asset/p2.jpeg'),
+                radius: 24.0,
+              ),
+              title: const Text(
+                'Noah Taylor',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18.0,
+                    color: Colors.white),
+              ),
+              subtitle: const Expanded(
+                child: Text(
+                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+                  style: TextStyle(color: Color(0xFF8E8E8E), fontSize: 15.0),
+                  overflow: TextOverflow
+                      .ellipsis, // adds "..." at the end if text is too long
+                  maxLines: 1, // ensures it's only one line
+                ),
+              ),
+              trailing: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  const Text(
+                    '6:59 pm',
+                    style: TextStyle(
+                      color: Colors.green,
+                      fontSize: 12.0,
+                    ),
+                  ),
+                  const SizedBox(height: 4.0),
+                  Container(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 6.0, vertical: 2.0),
+                    decoration: BoxDecoration(
+                      color: Colors.green,
+                      borderRadius: BorderRadius.circular(12.0),
+                    ),
+                    child: const Text(
+                      '25',
+                      style: TextStyle(color: Colors.white, fontSize: 12.0),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const ListTile(
+              leading: CircleAvatar(
+                backgroundImage: AssetImage('asset/p6.jpeg'),
+                radius: 24.0,
+              ),
+              title: Text(
+                'Ava Thomas',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18.0,
+                    color: Colors.white),
+              ),
+              subtitle: Expanded(
+                child: Text(
+                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+                  style: TextStyle(color: Color(0xFF8E8E8E), fontSize: 15.0),
+                  overflow: TextOverflow
+                      .ellipsis, // adds "..." at the end if text is too long
+                  maxLines: 1, // ensures it's only one line
+                ),
+              ),
+              trailing: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Text(
+                    '6:22 pm',
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Color(0xFF8E8E8E),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            ListTile(
+              leading: const CircleAvatar(
+                backgroundImage: AssetImage('asset/p9.jpeg'),
+                radius: 24.0,
+              ),
+              title: const Text(
+                'Project Team - Alpha',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18.0,
+                    color: Colors.white),
+              ),
+              subtitle: const Expanded(
+                child: Text(
+                  '~Ava: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+                  style: TextStyle(color: Color(0xFF8E8E8E), fontSize: 15.0),
+                  overflow: TextOverflow
+                      .ellipsis, // adds "..." at the end if text is too long
+                  maxLines: 1, // ensures it's only one line
+                ),
+              ),
+              trailing: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  const Text(
+                    '5:59 pm',
+                    style: TextStyle(
+                      color: Colors.green,
+                      fontSize: 12.0,
+                    ),
+                  ),
+                  const SizedBox(height: 4.0),
+                  Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      const Icon(
+                        Icons.notifications_off_sharp,
+                        color: Color(0xFF8E8E8E),
+                        size: 18.0,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 6.0, vertical: 2.0),
+                        decoration: BoxDecoration(
+                          color: Colors.green,
+                          borderRadius: BorderRadius.circular(12.0),
+                        ),
+                        child: const Text(
+                          '112',
+                          style: TextStyle(color: Colors.white, fontSize: 12.0),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            const ListTile(
+              leading: CircleAvatar(
+                backgroundImage: AssetImage('asset/images.jpeg'),
+                radius: 24.0,
+              ),
+              title: Text(
+                'John Doe',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18.0,
+                    color: Colors.white),
+              ),
+              subtitle: Expanded(
+                child: Text(
+                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+                  style: TextStyle(color: Color(0xFF8E8E8E), fontSize: 15.0),
+                  overflow: TextOverflow
+                      .ellipsis, // adds "..." at the end if text is too long
+                  maxLines: 1, // ensures it's only one line
+                ),
+              ),
+              trailing: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Text(
+                    '4:59 pm',
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Color(0xFF8E8E8E),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const ListTile(
+              leading: CircleAvatar(
+                backgroundImage: AssetImage('asset/p7.jpeg'),
+                radius: 24.0,
+              ),
+              title: Text(
+                'Jack Wright',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18.0,
+                    color: Colors.white),
+              ),
+              subtitle: Expanded(
+                child: Text(
+                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+                  style: TextStyle(color: Color(0xFF8E8E8E), fontSize: 15.0),
+                  overflow: TextOverflow
+                      .ellipsis, // adds "..." at the end if text is too long
+                  maxLines: 1, // ensures it's only one line
+                ),
+              ),
+              trailing: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Text(
+                    '4:58 pm',
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Color(0xFF8E8E8E),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            ListTile(
+              leading: const CircleAvatar(
+                backgroundImage: AssetImage('asset/p8.jpeg'),
+                radius: 24.0,
+              ),
+              title: const Text(
+                'Daniel Young',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18.0,
+                    color: Colors.white),
+              ),
+              subtitle: const Expanded(
+                child: Text(
+                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+                  style: TextStyle(color: Color(0xFF8E8E8E), fontSize: 15.0),
+                  overflow: TextOverflow
+                      .ellipsis, // adds "..." at the end if text is too long
+                  maxLines: 1, // ensures it's only one line
+                ),
+              ),
+              trailing: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  const Text(
+                    '12:45 pm',
+                    style: TextStyle(
+                      color: Colors.green,
+                      fontSize: 12.0,
+                    ),
+                  ),
+                  const SizedBox(height: 4.0),
+                  Container(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 6.0, vertical: 2.0),
+                    decoration: BoxDecoration(
+                      color: Colors.green,
+                      borderRadius: BorderRadius.circular(12.0),
+                    ),
+                    child: const Text(
+                      '25',
+                      style: TextStyle(color: Colors.white, fontSize: 12.0),
+                    ),
+                  ),
+                ],
+              ),
+            
